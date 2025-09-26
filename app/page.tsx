@@ -1,49 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Users, Calendar, Heart, Shield, Search } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">AM</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-foreground">AL-MURATTAL</h1>
-                <p className="text-xs text-muted-foreground">NETWORK</p>
-              </div>
-            </div>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/schools" className="text-foreground hover:text-primary transition-colors">
-                Schools
-              </Link>
-              <Link href="/events" className="text-foreground hover:text-primary transition-colors">
-                Events
-              </Link>
-              <Link href="/zakat" className="text-foreground hover:text-primary transition-colors">
-                Zakat Calculator
-              </Link>
-              <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-                About
-              </Link>
-            </nav>
-            <div className="flex items-center space-x-2">
-              <Button variant="outline" size="sm">
-                Sign In
-              </Button>
-              <Button size="sm">Apply for Verification</Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4 text-center">
@@ -56,14 +18,18 @@ export default function HomePage() {
               and support the global Muslim education community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Search className="w-5 h-5 mr-2" />
-                Find Schools
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                <Shield className="w-5 h-5 mr-2" />
-                Get Verified
-              </Button>
+              <Link href="/schools">
+                <Button size="lg" className="text-lg px-8">
+                  <span className="mr-2">🔍</span>
+                  Find Schools
+                </Button>
+              </Link>
+              <Link href="/kys">
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                  <span className="mr-2">✅</span>
+                  Get Verified
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -74,11 +40,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">1,247</div>
+              <div className="text-3xl font-bold text-primary mb-2">2,847</div>
               <div className="text-muted-foreground">Verified Schools</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">45</div>
+              <div className="text-3xl font-bold text-primary mb-2">15</div>
               <div className="text-muted-foreground">Countries</div>
             </div>
             <div className="text-center">
@@ -86,7 +52,7 @@ export default function HomePage() {
               <div className="text-muted-foreground">Upcoming Events</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">$2.4M</div>
+              <div className="text-3xl font-bold text-primary mb-2">$1.2M</div>
               <div className="text-muted-foreground">Donations Raised</div>
             </div>
           </div>
@@ -109,7 +75,7 @@ export default function HomePage() {
             <Card className="border-border/50 hover:border-primary/20 transition-colors">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-primary" />
+                  <span className="text-2xl">✅</span>
                 </div>
                 <CardTitle>KYS Verification</CardTitle>
                 <CardDescription>
@@ -129,7 +95,7 @@ export default function HomePage() {
             <Card className="border-border/50 hover:border-primary/20 transition-colors">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="w-6 h-6 text-primary" />
+                  <span className="text-2xl">📍</span>
                 </div>
                 <CardTitle>Global Directory</CardTitle>
                 <CardDescription>Interactive map and searchable directory of Islamic schools worldwide</CardDescription>
@@ -147,7 +113,7 @@ export default function HomePage() {
             <Card className="border-border/50 hover:border-primary/20 transition-colors">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-primary" />
+                  <span className="text-2xl">📅</span>
                 </div>
                 <CardTitle>Event Management</CardTitle>
                 <CardDescription>Discover and participate in Islamic educational and community events</CardDescription>
@@ -170,7 +136,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-foreground">Upcoming Events</h2>
-            <Button variant="outline">View All Events</Button>
+            <Link href="/events">
+              <Button variant="outline">View All Events</Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -186,7 +154,7 @@ export default function HomePage() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-muted-foreground">
-                    <Users className="w-4 h-4 mr-1" />
+                    <span className="mr-1">👥</span>
                     200 capacity
                   </div>
                   <Button size="sm">Register</Button>
@@ -206,7 +174,7 @@ export default function HomePage() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-muted-foreground">
-                    <Users className="w-4 h-4 mr-1" />
+                    <span className="mr-1">👥</span>
                     150 capacity
                   </div>
                   <Button size="sm">Register</Button>
@@ -226,7 +194,7 @@ export default function HomePage() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-muted-foreground">
-                    <Users className="w-4 h-4 mr-1" />
+                    <span className="mr-1">👥</span>
                     300 capacity
                   </div>
                   <Button size="sm">Register</Button>
@@ -241,17 +209,21 @@ export default function HomePage() {
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <Heart className="w-16 h-16 text-primary mx-auto mb-6" />
+            <div className="text-6xl mb-6">💝</div>
             <h2 className="text-3xl font-bold text-foreground mb-4">Support Islamic Education</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Your donations help provide quality Islamic education to students worldwide. Calculate your Zakat and
               contribute to this noble cause.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">Calculate Zakat</Button>
-              <Button variant="outline" size="lg">
-                Make Donation
-              </Button>
+              <Link href="/zakat">
+                <Button size="lg">Calculate Zakat</Button>
+              </Link>
+              <Link href="/donations">
+                <Button variant="outline" size="lg">
+                  Make Donation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -297,6 +269,16 @@ export default function HomePage() {
                 <li>
                   <Link href="/kys" className="hover:text-primary">
                     Get Verified
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/boards" className="hover:text-primary">
+                    Public Boards
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/donations" className="hover:text-primary">
+                    Donations
                   </Link>
                 </li>
               </ul>
@@ -350,7 +332,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 AL-MURATTAL NETWORK. All rights reserved.</p>
+            <p>&copy; 2025 AL-MURATTAL NETWORK. All rights reserved.</p>
           </div>
         </div>
       </footer>

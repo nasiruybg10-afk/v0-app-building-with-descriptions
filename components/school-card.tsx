@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, Users, Phone, Mail, ExternalLink, Shield } from "lucide-react"
 import Link from "next/link"
 
 interface SchoolCardProps {
@@ -40,13 +39,13 @@ export function SchoolCard({ school }: SchoolCardProps) {
               </CardTitle>
               {school.verified && (
                 <Badge variant="secondary" className="bg-primary/10 text-primary">
-                  <Shield className="w-3 h-3 mr-1" />
+                  <span className="mr-1">✅</span>
                   Verified
                 </Badge>
               )}
             </div>
             <CardDescription className="flex items-center text-muted-foreground mb-2">
-              <MapPin className="w-4 h-4 mr-1" />
+              <span className="mr-1">📍</span>
               {school.address}
             </CardDescription>
             <p className="text-sm text-muted-foreground">{school.description}</p>
@@ -54,7 +53,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
           <div className="text-right">
             <div className="text-sm text-muted-foreground">Est. {school.established}</div>
             <div className="flex items-center text-sm text-muted-foreground mt-1">
-              <Users className="w-4 h-4 mr-1" />
+              <span className="mr-1">👥</span>
               {school.students} students
             </div>
           </div>
@@ -103,14 +102,14 @@ export function SchoolCard({ school }: SchoolCardProps) {
                 href={`mailto:${school.contact_email}`}
                 className="flex items-center text-muted-foreground hover:text-primary transition-colors"
               >
-                <Mail className="w-4 h-4 mr-1" />
+                <span className="mr-1">📧</span>
                 Email
               </a>
               <a
                 href={`tel:${school.contact_phone}`}
                 className="flex items-center text-muted-foreground hover:text-primary transition-colors"
               >
-                <Phone className="w-4 h-4 mr-1" />
+                <span className="mr-1">📞</span>
                 Call
               </a>
             </div>
@@ -119,7 +118,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
                 <Link href={`/schools/${school.id}`}>View Profile</Link>
               </Button>
               <Button size="sm">
-                <ExternalLink className="w-4 h-4 mr-1" />
+                <span className="mr-1">🔗</span>
                 Donate
               </Button>
             </div>
