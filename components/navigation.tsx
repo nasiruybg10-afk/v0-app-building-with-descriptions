@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 const navigation = [
   { name: "Home", href: "/", icon: "🏠" },
@@ -33,14 +34,12 @@ export default function Navigation() {
     <nav className="bg-white border-b border-emerald-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo - Updated to use actual logo image and new name */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AM</span>
-            </div>
+            <Image src="/logo.png" alt="AL-MURATTAL" width={40} height={40} className="w-10 h-10" />
             <span className="font-bold text-xl text-emerald-900">AL-MURATTAL</span>
             <Badge variant="outline" className="text-xs">
-              NETWORK
+              GLOBAL NETWORK
             </Badge>
           </Link>
 
@@ -98,9 +97,7 @@ export default function Navigation() {
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col h-full">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">AM</span>
-                  </div>
+                  <Image src="/logo.png" alt="AL-MURATTAL" width={32} height={32} className="w-8 h-8" />
                   <span className="font-bold text-xl text-emerald-900">AL-MURATTAL</span>
                 </div>
 

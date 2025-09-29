@@ -149,7 +149,7 @@ export default function AdminDashboard() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-4xl font-bold text-emerald-900">Admin Dashboard</h1>
-            <p className="text-lg text-emerald-700 mt-2">AL-MURATTAL Network Management Center</p>
+            <p className="text-lg text-emerald-700 mt-2">AL-MURATTAL Global Network Management Center</p>
           </div>
           <div className="flex items-center gap-4">
             <Button variant="outline" size="sm">
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
                   <Shield className="h-5 w-5" />
                   Network Hierarchy Overview
                 </CardTitle>
-                <CardDescription>Current structure of the AL-MURATTAL Network</CardDescription>
+                <CardDescription>Current structure of the AL-MURATTAL Global Network</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -298,7 +298,7 @@ export default function AdminDashboard() {
             <Card>
               <CardHeader>
                 <CardTitle>School Management</CardTitle>
-                <CardDescription>Manage all schools in the AL-MURATTAL Network</CardDescription>
+                <CardDescription>Manage all schools in the AL-MURATTAL Global Network</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-center py-12">

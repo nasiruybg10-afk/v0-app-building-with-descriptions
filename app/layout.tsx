@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "AL-MURATTAL NETWORK - Global Qur'ān School Directory",
+  title: "AL-MURATTAL GLOBAL NETWORK - Global Qur'ān School Directory",
   description: "A global network of verified Qur'ān schools with event management, donations, and community features",
   generator: "v0.app",
   manifest: "/manifest.json",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "AL-MURATTAL NETWORK",
-    title: "AL-MURATTAL NETWORK - Global Qur'ān School Directory",
+    siteName: "AL-MURATTAL GLOBAL NETWORK",
+    title: "AL-MURATTAL GLOBAL NETWORK - Global Qur'ān School Directory",
     description: "A global network of verified Qur'ān schools with event management, donations, and community features",
   },
   twitter: {
     card: "summary",
-    title: "AL-MURATTAL NETWORK",
+    title: "AL-MURATTAL GLOBAL NETWORK",
     description: "A global network of verified Qur'ān schools",
   },
 }

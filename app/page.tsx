@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -235,12 +236,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">AM</span>
-                </div>
+                <Image src="/logo.png" alt="AL-MURATTAL" width={32} height={32} className="w-8 h-8" />
                 <div>
                   <h3 className="font-bold text-foreground">AL-MURATTAL</h3>
-                  <p className="text-xs text-muted-foreground">NETWORK</p>
+                  <p className="text-xs text-muted-foreground">GLOBAL NETWORK</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -332,7 +331,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 AL-MURATTAL NETWORK. All rights reserved.</p>
+            <p>&copy; 2025 AL-MURATTAL GLOBAL NETWORK. All rights reserved.</p>
           </div>
         </div>
       </footer>
