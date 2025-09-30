@@ -6,7 +6,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">About AL-MURATTAL GLOBAL NETWORK</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">About AL-MURATTAL NETWORK</h1>
             <p className="text-xl text-muted-foreground">
               Connecting the global Muslim community through verified Islamic education
             </p>
@@ -18,7 +18,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                AL-MURATTAL GLOBAL NETWORK is dedicated to creating a global ecosystem of verified Islamic educational
+                AL-MURATTAL NETWORK is dedicated to creating a global ecosystem of verified Islamic educational
                 institutions. We believe that quality Islamic education should be accessible, transparent, and
                 trustworthy for families worldwide.
               </p>
@@ -109,9 +109,9 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Founded in Gombe, Nigeria, AL-MURATTAL GLOBAL NETWORK emerged from a simple observation: parents
-                struggled to find trustworthy information about Islamic schools, and quality institutions lacked
-                visibility to reach families who needed them.
+                Founded in Gombe, Nigeria, AL-MURATTAL NETWORK emerged from a simple observation: parents struggled to
+                find trustworthy information about Islamic schools, and quality institutions lacked visibility to reach
+                families who needed them.
               </p>
               <p className="text-muted-foreground">
                 What started as a local directory has grown into a global platform serving thousands of schools across
@@ -130,7 +130,7 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-foreground mb-4">Join Our Mission</h3>
             <p className="text-muted-foreground mb-6">
               Whether you're a school administrator, educator, parent, or supporter of Islamic education, there's a
-              place for you in the AL-MURATTAL GLOBAL NETWORK community.
+              place for you in the AL-MURATTAL NETWORK community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/kys" className="inline-block">
